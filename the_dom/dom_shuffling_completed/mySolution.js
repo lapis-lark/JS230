@@ -37,7 +37,14 @@ let [image1, image2] = images;
 let image1Clone = image1.cloneNode(true);
 let image2Clone = image2.cloneNode(true);
 
-image1.parentElement.insertBefore(image2Clone, image1);
-image2.parentElement.insertBefore(image1Clone, image2);
+let figure1 = image1.parentElement;
+let figure2 = image2.parentElement;
+
+figure1.insertBefore(image2Clone, image1);
+figure2.insertBefore(image1Clone, image2);
 image1.remove();
 image2.remove();
+
+let article = document.querySelector('article');
+article.append(figure1);
+article.append(figure2);
