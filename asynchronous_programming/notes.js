@@ -6,4 +6,10 @@
 
   currentTarget === this !!
 
+  if the change you made JUST WON'T OCCUR, see if the element you're listening on actually has
+  screen real estate? maybe just use flags as conditions and put the event listener on document
+  or an outer element
+
+  callbacks let java execute tasks in the background that take time
+
 */
