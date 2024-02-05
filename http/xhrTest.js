@@ -4,7 +4,7 @@ request.responseType = 'json';
 
 request.addEventListener('load', (event) => {
   console.log(request.status);
-  console.log(request.open_issues);
-});
+  console.log(request.response.open_issues);
+});a
 
 request.send();
